@@ -1,8 +1,6 @@
 import QtQuick 2.0
 import QtQuick.Window 2.0
 
-// checking that this shows up in git
-
 Window {
     id: window
     width: 900
