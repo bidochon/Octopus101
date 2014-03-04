@@ -4,7 +4,7 @@ import QtQuick.Window 2.0
 Window {
     id: window
     width: 1100
-    height: 900
+    height: 1000
     minimumHeight: 900
     minimumWidth: 950
     title: "Octopus Tutorial - Step by Step"
@@ -17,7 +17,7 @@ Window {
 
         // desktop image
         Image {
-            source: "images/desktop.png"
+            source: "global_images/desktop.png"
             z: 0
             x: -1
         }
@@ -52,7 +52,7 @@ Window {
                     property: "opacity"
                     duration: 500
                 }
-                NumberAnimation { target: topmenu
+                NumberAnimation { target: preparationstep
                     property: "opacity"
                     duration: 500
                 }
@@ -67,7 +67,7 @@ Window {
                     opacity: 1
                 }
                 PropertyChanges {
-                    target: topmenu
+                    target: preparationstep
                     opacity: 0
                 }
                 PropertyChanges {
@@ -82,7 +82,7 @@ Window {
                     opacity: 0
                 }
                 PropertyChanges {
-                    target: topmenu
+                    target: preparationstep
                     opacity: 1
                 }
                 PropertyChanges {
