@@ -29,7 +29,7 @@ Item {
     
     Text {
         id: value
-        x: 45
+        x: 38
         y: 15
         font.bold: true
         color: "white"
