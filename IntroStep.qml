@@ -62,22 +62,22 @@ Rectangle {
         anchors.left: parent.left
     }
 
-    MouseArea {
-        anchors.fill: prev
-        hoverEnabled: true
-        onPressed: {
-            prev.source = "global_images/prev_click.png"
-        }
-        onEntered: {
-            prev.source = "global_images/prev_on.png"
-        }
-        onExited: {
-            prev.source = "global_images/prev_off.png"
-        }
-        onReleased: {
-            prev.source = "global_images/prev_on.png"
-        }
-    }
+//    MouseArea {
+//        anchors.fill: prev
+//        hoverEnabled: true
+//        onPressed: {
+//            prev.source = "global_images/prev_click.png"
+//        }
+//        onEntered: {
+//            prev.source = "global_images/prev_on.png"
+//        }
+//        onExited: {
+//            prev.source = "global_images/prev_off.png"
+//        }
+//        onReleased: {
+//            prev.source = "global_images/prev_on.png"
+//        }
+//    }
 
     Image {
         id: next
@@ -86,22 +86,22 @@ Rectangle {
         anchors.right: parent.right
     }
 
-    MouseArea {
-        anchors.fill: next
-        hoverEnabled: true
-        onPressed: {
-            next.source = "global_images/next_click.png"
-        }
-        onEntered: {
-            next.source = "global_images/next_on.png"
-        }
-        onExited: {
-            next.source = "global_images/next_off.png"
-        }
-        onReleased: {
-            next.source = "global_images/next_on.png"
-        }
-    }
+//    MouseArea {
+//        anchors.fill: next
+//        hoverEnabled: true
+//        onPressed: {
+//            next.source = "global_images/next_click.png"
+//        }
+//        onEntered: {
+//            next.source = "global_images/next_on.png"
+//        }
+//        onExited: {
+//            next.source = "global_images/next_off.png"
+//        }
+//        onReleased: {
+//            next.source = "global_images/next_on.png"
+//        }
+//    }
 
     Image {
         id: prev_next_label

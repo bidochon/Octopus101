@@ -38,6 +38,13 @@ Window {
             opacity: 0
         }
 
+        Step1 {
+            id: loadstep
+            height: window.height - topmenu.height
+            width: window.width
+            anchors.top: topmenu.bottom
+            opacity: 0
+        }
 
         // make sure this stay on top
         TopMenu{
@@ -53,6 +60,10 @@ Window {
                     duration: 500
                 }
                 NumberAnimation { target: preparationstep
+                    property: "opacity"
+                    duration: 500
+                }
+                NumberAnimation { target: loadstep
                     property: "opacity"
                     duration: 500
                 }
@@ -83,6 +94,25 @@ Window {
                 }
                 PropertyChanges {
                     target: preparationstep
+                    opacity: 1
+                }
+                PropertyChanges {
+                    target: topmenu
+                    opacity: 1
+                }
+            },
+            State {
+                name: "loadstep"
+                PropertyChanges {
+                    target: introstep
+                    opacity: 0
+                }
+                PropertyChanges {
+                    target: preparationstep
+                    opacity: 0
+                }
+                PropertyChanges {
+                    target: loadstep
                     opacity: 1
                 }
                 PropertyChanges {
