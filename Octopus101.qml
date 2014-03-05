@@ -31,19 +31,21 @@ Window {
         }
 
         PreparationStep {
-            id: preparationstep
+            id: prepastep
             height: window.height - topmenu.height
             width: window.width
             anchors.top: topmenu.bottom
             opacity: 0
+            enabled: false
         }
 
-        Step1 {
+        LoadStep {
             id: loadstep
             height: window.height - topmenu.height
             width: window.width
             anchors.top: topmenu.bottom
             opacity: 0
+            enabled: false
         }
 
         // make sure this stay on top
@@ -59,7 +61,7 @@ Window {
                     property: "opacity"
                     duration: 500
                 }
-                NumberAnimation { target: preparationstep
+                NumberAnimation { target: prepastep
                     property: "opacity"
                     duration: 500
                 }
@@ -78,8 +80,9 @@ Window {
                     opacity: 1
                 }
                 PropertyChanges {
-                    target: preparationstep
+                    target: prepastep
                     opacity: 0
+                    enabled: false
                 }
                 PropertyChanges {
                     target: topmenu
@@ -93,8 +96,9 @@ Window {
                     opacity: 0
                 }
                 PropertyChanges {
-                    target: preparationstep
+                    target: prepastep
                     opacity: 1
+                    enabled: true
                 }
                 PropertyChanges {
                     target: topmenu
@@ -108,17 +112,20 @@ Window {
                     opacity: 0
                 }
                 PropertyChanges {
-                    target: preparationstep
+                    target: prepastep
                     opacity: 0
+                    enabled: false
                 }
                 PropertyChanges {
                     target: loadstep
                     opacity: 1
+                    enabled: true
                 }
                 PropertyChanges {
                     target: topmenu
                     opacity: 1
                 }
+
             }
         ]
 

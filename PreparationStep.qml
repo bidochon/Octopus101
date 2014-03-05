@@ -6,7 +6,7 @@ Rectangle {
     color: "transparent"
 
     property variant statesNames: ["prepa1","prepa2","prepa3","prepa4","prepa5","prepa6","prepa7","prepa8"]
-    property int currentState: 0
+    property int currentState: 0    
 
     Image {
         id: notepad
@@ -260,8 +260,11 @@ Rectangle {
         hoverEnabled: true
         onPressed: {
             next.source = "global_images/next_click.png"
+            console.log(parent.id)
+//            if (parent.id === prepastep) {
             currentState++
             prepastep.state = statesNames[currentState]
+//            }
         }
         onEntered: {
             next.source = "global_images/next_on.png"
