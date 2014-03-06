@@ -293,7 +293,7 @@ Item {
                                 step7.isSelected = false;
                                 step8.buttonImageSource = "buttons/MenuBar_off.png";
                                 step8.isSelected = false;
-                                windowrectangle.state = "filter";
+                                windowrectangle.state = "filterstep";
                             } else {
                                 buttonImageSource = "buttons/MenuBar_selected.png";
                             }
