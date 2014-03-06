@@ -48,6 +48,15 @@ Window {
             enabled: false
         }
 
+        CropStep {
+            id: cropstep
+            height: window.height - topmenu.height
+            width: window.width
+            anchors.top: topmenu.bottom
+            opacity: 0
+            enabled: false
+        }
+
         // make sure this stay on top
         TopMenu{
             id: topmenu
@@ -66,6 +75,10 @@ Window {
                     duration: 500
                 }
                 NumberAnimation { target: loadstep
+                    property: "opacity"
+                    duration: 500
+                }
+                NumberAnimation { target: cropstep
                     property: "opacity"
                     duration: 500
                 }
@@ -88,6 +101,11 @@ Window {
                     target: topmenu
                     opacity: 1
                 }
+                PropertyChanges {
+                    target: cropstep
+                    opacity: 0
+                    enabled: false
+                }
             },
             State {
                 name: "prepa"
@@ -103,6 +121,11 @@ Window {
                 PropertyChanges {
                     target: topmenu
                     opacity: 1
+                }
+                PropertyChanges {
+                    target: cropstep
+                    opacity: 0
+                    enabled: false
                 }
             },
             State {
@@ -125,7 +148,37 @@ Window {
                     target: topmenu
                     opacity: 1
                 }
-
+                PropertyChanges {
+                    target: cropstep
+                    opacity: 0
+                    enabled: false
+                }
+            },
+            State {
+                name: "cropstep"
+                PropertyChanges {
+                    target: introstep
+                    opacity: 0
+                }
+                PropertyChanges {
+                    target: prepastep
+                    opacity: 0
+                    enabled: false
+                }
+                PropertyChanges {
+                    target: loadstep
+                    opacity: 0
+                    enabled: false
+                }
+                PropertyChanges {
+                    target: cropstep
+                    opacity: 1
+                    enabled: true
+                }
+                PropertyChanges {
+                    target: topmenu
+                    opacity: 1
+                }
             }
         ]
 
