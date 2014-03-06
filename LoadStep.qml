@@ -5,7 +5,7 @@ Rectangle {
     id: loadstep
     color: "transparent"
 
-    property variant loadstep_statesNames: ["loadstep1","loadstep2","loadstep3"]
+    property variant loadstep_statesNames: ["loadstep1","loadstep2","loadstep3","loadstep4","loadstep5","loadstep6","loadstep7","loadstep8","loadstep9","loadstep10","loadstep11"]
     property int loadstep_currentState: 0
 
     Image {
@@ -65,8 +65,7 @@ Rectangle {
         width: notepad.width -100
         wrapMode: Text.WordWrap
         text: "Because Octopus only work with <b>tiff</b> files, the program is going to ask you if you want to convert them to TIFF. Click <b>OK</b>.<br><br><br>
-                 - Select the same folder again (that contain all your data)<br> by selecting <b>Current Folder</b><br><br>
-                 - Then accept the proposed folder name (<b>Converted</b>) by selecting <b>Current Folder</b>"
+                 - Select the same folder again (that contain all your data)<br> and click <b>Current Folder</b>"
         font.family: "Helevetica"
         font.pointSize: 14
         color: "black"
@@ -90,6 +89,208 @@ Rectangle {
         opacity: 0
     }
 
+    // converted folder name
+    Text {
+        id: loadstep_text4
+        x: loadstep_text1.x
+        y: loadstep_text1.y
+        width: notepad.width -100
+        wrapMode: Text.WordWrap
+        text: "Accept the default folder named <b>converted</b> proposed (where the TIFF files will be created)."
+        font.family: "Helevetica"
+        font.pointSize: 14
+        color: "black"
+        lineHeight: 1.2
+        opacity: 0
+    }
+
+    Image {
+        id: loadstep_image5
+        source: "loadstep/image5.png"
+        x: 35
+        y: loadstep_image1.y + 15
+        opacity: 0
+    }
+
+    // converted images window
+    Text {
+        id: loadstep_text5
+        x: loadstep_text4.x
+        y: loadstep_text4.y + loadstep_text4.height + 20
+        width: notepad.width -100
+        wrapMode: Text.WordWrap
+        text: "The <b>Convert Images</b> window will show up.<br><br>
+        <font color='red'>WARNING</font>: Make sure you have <b>16 bit tiff</b> selected as Output format.<br>
+        Click <b>Convert all</b>"
+        font.family: "Helevetica"
+        font.pointSize: 14
+        color: "black"
+        lineHeight: 1.2
+        opacity: 0
+    }
+
+    Image {
+        id: loadstep_image6
+        source: "loadstep/image7.png"
+        x: 55
+        y: loadstep_image1.y + 180
+        opacity: 0
+    }
+
+    // converted images window
+    Text {
+        id: loadstep_text6
+        x: loadstep_text5.x
+        y: loadstep_text5.y + loadstep_text5.height + 20
+        width: notepad.width -100
+        wrapMode: Text.WordWrap
+        text: "Make sure you select <br><font color='red'><b>No - save current gray values without conversion</b></font>."
+        font.family: "Helevetica"
+        font.pointSize: 14
+        color: "black"
+        lineHeight: 1.2
+        opacity: 0
+    }
+
+    Image {
+        id: loadstep_image7
+        source: "loadstep/image8.png"
+        x: 80
+        y: loadstep_image1.y + 190
+        opacity: 0
+    }
+
+    // conversion start, selection of OB
+    Text {
+        id: loadstep_text7
+        x: loadstep_text1.x
+        y: loadstep_text1.y
+        width: notepad.width -100
+        wrapMode: Text.WordWrap
+        text: "The conversion will start... BE PATIENT !<br><br>
+        Then you will need to select the <b>first Open Beam</b> file."
+        font.family: "Helevetica"
+        font.pointSize: 14
+        color: "black"
+        lineHeight: 1.2
+        opacity: 0
+    }
+
+    Image {
+        id: loadstep_image8
+        source: "loadstep/image9.png"
+        x: 100
+        y: loadstep_image1.y - 30
+        opacity: 0
+    }
+
+    Image {
+        id: loadstep_image9
+        source: "loadstep/image10.png"
+        x: 50
+        y: loadstep_image8.y + loadstep_image8.height - 60
+        opacity: 0
+    }
+
+    // selection of DF
+    Text {
+        id: loadstep_text8
+        x: loadstep_text1.x
+        y: loadstep_text2.y + loadstep_text2.height + 20
+        width: notepad.width -100
+        wrapMode: Text.WordWrap
+        text: "Now, you need to select the <b>first Dark Field (Dark Image)</b> file."
+        font.family: "Helevetica"
+        font.pointSize: 14
+        color: "black"
+        lineHeight: 1.2
+        opacity: 0
+    }
+
+    Image {
+        id: loadstep_image10
+        source: "loadstep/image11.png"
+        x: 100
+        y: loadstep_image1.y - 70
+        opacity: 0
+    }
+
+    Image {
+        id: loadstep_image11
+        source: "loadstep/image12.png"
+        x: 50
+        y: loadstep_image10.y + loadstep_image10.height - 60
+        opacity: 0
+    }
+
+    // check input
+    Text {
+        id: loadstep_text9
+        x: loadstep_text1.x
+        y: loadstep_text1.y
+        width: notepad.width -100
+        wrapMode: Text.WordWrap
+        text: "Check in the <b>File Selection</b> window that all the <b>Data</b>, <b>Open Beam</b> and <b>Dark Field</b> files have been loaded."
+        font.family: "Helevetica"
+        font.pointSize: 14
+        color: "black"
+        lineHeight: 1.2
+        opacity: 0
+    }
+
+    Image {
+        id: loadstep_image12
+        source: "loadstep/image13.png"
+        x: 100
+        y: loadstep_image1.y
+        opacity: 0
+    }
+
+    // define last angle
+    Text {
+        id: loadstep_text10
+        x: loadstep_text9.x
+        y: loadstep_text9.y + loadstep_text9.height + 20
+        width: notepad.width -100
+        wrapMode: Text.WordWrap
+        text: "Enter in the <b>Last Angle</b> box, the last angle position that you recorded in the <b>Preparation Step</b>, then click <b>OK</b>."
+        font.family: "Helevetica"
+        font.pointSize: 14
+        color: "black"
+        lineHeight: 1.2
+        opacity: 0
+    }
+
+    Image {
+        id: loadstep_image13
+        source: "loadstep/image14.png"
+        x: 130
+        y: loadstep_image12.y + loadstep_image12.height - 120
+        opacity: 0
+    }
+
+    // recap
+    Text {
+        id: loadstep_text11
+        x: loadstep_text10.x
+        y: loadstep_text10.y + loadstep_text10.height + 20
+        width: notepad.width -100
+        wrapMode: Text.WordWrap
+        text: "The loading step is done! Just check one more time the number of <b>Data</b>, <b>Open Beam</b> and <b>Dark Field</b> files."
+        font.family: "Helevetica"
+        font.pointSize: 14
+        color: "black"
+        lineHeight: 1.2
+        opacity: 0
+    }
+
+    Image {
+        id: loadstep_image14
+        source: "loadstep/image15.png"
+        x: 50
+        y: 160
+        opacity: 0
+    }
 
     // bottom buttons
     Image {
@@ -233,6 +434,651 @@ Rectangle {
             PropertyChanges {
                 target: loadstep_image4
                 opacity: 1
+            }
+        },
+        State {
+            name: "loadstep4"
+            PropertyChanges {
+                target: loadstep_text1
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image1
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_prev
+                opacity: 1
+            }
+            PropertyChanges {
+                target: loadstep_prev_mousearea
+                enabled: true
+            }
+            PropertyChanges {
+                target: loadstep_image2
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text2
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text3
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image3
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image4
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image5
+                opacity: 1
+            }
+            PropertyChanges {
+                target: loadstep_text4
+                opacity: 1
+            }
+        },
+        State {
+            name: "loadstep5"
+            PropertyChanges {
+                target: loadstep_text1
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image1
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_prev
+                opacity: 1
+            }
+            PropertyChanges {
+                target: loadstep_prev_mousearea
+                enabled: true
+            }
+            PropertyChanges {
+                target: loadstep_image2
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text2
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text3
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image3
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image4
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image5
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text4
+                opacity: 0.5
+            }
+            PropertyChanges {
+                target: loadstep_image6
+                opacity: 1
+            }
+            PropertyChanges {
+                target: loadstep_text5
+                opacity: 1
+            }
+        },
+        State {
+            name: "loadstep6"
+            PropertyChanges {
+                target: loadstep_text1
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image1
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_prev
+                opacity: 1
+            }
+            PropertyChanges {
+                target: loadstep_prev_mousearea
+                enabled: true
+            }
+            PropertyChanges {
+                target: loadstep_image2
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text2
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text3
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image3
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image4
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image5
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text4
+                opacity: 0.5
+            }
+            PropertyChanges {
+                target: loadstep_image6
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text5
+                opacity: 0.5
+            }
+            PropertyChanges {
+                target: loadstep_image7
+                opacity: 1
+            }
+            PropertyChanges {
+                target: loadstep_text6
+                opacity: 1
+            }
+        },
+        State {
+            name: "loadstep7"
+            PropertyChanges {
+                target: loadstep_text1
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image1
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_prev
+                opacity: 1
+            }
+            PropertyChanges {
+                target: loadstep_prev_mousearea
+                enabled: true
+            }
+            PropertyChanges {
+                target: loadstep_image2
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text2
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text3
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image3
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image4
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image5
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text4
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image6
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text5
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image7
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text6
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image8
+                opacity: 1
+            }
+            PropertyChanges {
+                target: loadstep_image9
+                opacity: 1
+            }
+            PropertyChanges {
+                target: loadstep_text7
+                opacity: 1
+            }
+        },
+        State {
+            name: "loadstep8"
+            PropertyChanges {
+                target: loadstep_text1
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image1
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_prev
+                opacity: 1
+            }
+            PropertyChanges {
+                target: loadstep_prev_mousearea
+                enabled: true
+            }
+            PropertyChanges {
+                target: loadstep_image2
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text2
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text3
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image3
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image4
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image5
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text4
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image6
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text5
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image7
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text6
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image8
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image9
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text7
+                opacity: 0.5
+            }
+            PropertyChanges {
+                target: loadstep_image10
+                opacity: 1
+            }
+            PropertyChanges {
+                target: loadstep_image11
+                opacity: 1
+            }
+            PropertyChanges {
+                target: loadstep_text8
+                opacity: 1
+            }
+        },
+        State {
+            name: "loadstep9"
+            PropertyChanges {
+                target: loadstep_text1
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image1
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_prev
+                opacity: 1
+            }
+            PropertyChanges {
+                target: loadstep_prev_mousearea
+                enabled: true
+            }
+            PropertyChanges {
+                target: loadstep_image2
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text2
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text3
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image3
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image4
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image5
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text4
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image6
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text5
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image7
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text6
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image8
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image9
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text7
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image10
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image11
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text8
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image12
+                opacity: 1
+            }
+            PropertyChanges {
+                target: loadstep_text9
+                opacity: 1
+            }
+
+        },
+        State {
+            name: "loadstep10"
+            PropertyChanges {
+                target: loadstep_text1
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image1
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_prev
+                opacity: 1
+            }
+            PropertyChanges {
+                target: loadstep_prev_mousearea
+                enabled: true
+            }
+            PropertyChanges {
+                target: loadstep_image2
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text2
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text3
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image3
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image4
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image5
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text4
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image6
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text5
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image7
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text6
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image8
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image9
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text7
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image10
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image11
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text8
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image12
+                opacity: 1
+            }
+            PropertyChanges {
+                target: loadstep_text9
+                opacity: 0.5
+            }
+            PropertyChanges {
+                target: loadstep_image13
+                opacity: 1
+            }
+            PropertyChanges {
+                target: loadstep_text10
+                opacity: 1
+            }
+        },
+        State {
+            name: "loadstep11"
+            PropertyChanges {
+                target: loadstep_text1
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image1
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_prev
+                opacity: 1
+            }
+            PropertyChanges {
+                target: loadstep_prev_mousearea
+                enabled: true
+            }
+            PropertyChanges {
+                target: loadstep_image2
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text2
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text3
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image3
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image4
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image5
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text4
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image6
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text5
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image7
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text6
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image8
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image9
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text7
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image10
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image11
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text8
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_image12
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text9
+                opacity: 0.5
+            }
+            PropertyChanges {
+                target: loadstep_image13
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_text10
+                opacity: 0.5
+            }
+            PropertyChanges {
+                target: loadstep_image14
+                opacity: 1
+            }
+            PropertyChanges {
+                target: loadstep_text11
+                opacity: 1
+            }
+            PropertyChanges {
+                target: loadstep_next
+                opacity: 0
+            }
+            PropertyChanges {
+                target: loadstep_next_mousearea
+                enabled: false
             }
         }
     ]
