@@ -453,7 +453,7 @@ Item {
                                 step6.isSelected = false;
                                 step8.buttonImageSource = "buttons/MenuBar_off.png";
                                 step8.isSelected = false;
-                                windowrectangle.state = "sinogram";
+                                windowrectangle.state = "sinostep";
                             } else {
                                 buttonImageSource = "buttons/MenuBar_selected.png";
                             }
