@@ -399,7 +399,7 @@ Item {
                                 step7.isSelected = false;
                                 step8.buttonImageSource = "buttons/MenuBar_off.png";
                                 step8.isSelected = false;
-                                windowrectangle.state = "tilt";
+                                windowrectangle.state = "tiltstep";
                             } else {
                                 buttonImageSource = "buttons/MenuBar_selected.png";
                             }

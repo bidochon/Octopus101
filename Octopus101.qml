@@ -75,6 +75,15 @@ Window {
             enabled: false
         }
 
+        TiltStep {
+            id: tiltstep
+            height: window.height - topmenu.height
+            width: window.width
+            anchors.top: topmenu.bottom
+            opacity: 0
+            enabled: false
+        }
+
         // make sure this stay on top
         TopMenu{
             id: topmenu
@@ -272,6 +281,48 @@ Window {
                     target: topmenu
                     opacity: 1
                 }
+            },
+            State {
+                name: "tiltstep"
+                PropertyChanges {
+                    target: introstep
+                    opacity: 0
+                }
+                PropertyChanges {
+                    target: prepastep
+                    opacity: 0
+                    enabled: false
+                }
+                PropertyChanges {
+                    target: loadstep
+                    opacity: 0
+                    enabled: false
+                }
+                PropertyChanges {
+                    target: cropstep
+                    opacity: 0
+                    enabled: false
+                }
+                PropertyChanges {
+                    target: filterstep
+                    opacity: 0
+                    enabled: false
+                }
+                PropertyChanges {
+                    target: normstep
+                    opacity: 0
+                    enabled: false
+                }
+                PropertyChanges {
+                    target: tiltstep
+                    opacity: 1
+                    enabled: true
+                }
+                PropertyChanges {
+                    target: topmenu
+                    opacity: 1
+                }
+
             }
         ]
 
