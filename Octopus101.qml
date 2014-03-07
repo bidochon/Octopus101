@@ -3,7 +3,7 @@ import QtQuick.Window 2.0
 
 Window {
     id: window
-    width: 1100
+    width: 1200  //1100
     height: 1000
     minimumHeight: 900
     minimumWidth: 950
@@ -93,6 +93,15 @@ Window {
             enabled: false
         }
 
+        ReconstructionStep {
+            id: recostep
+            height: window.height - topmenu.height
+            width: window.width
+            anchors.top: topmenu.bottom
+            opacity: 0
+            enabled: false
+        }
+
         // make sure this stay on top
         TopMenu{
             id: topmenu
@@ -127,6 +136,10 @@ Window {
                     duration: 500
                 }
                 NumberAnimation { target: sinostep
+                    property: "opacity"
+                    duration: 500
+                }
+                NumberAnimation { target: recostep
                     property: "opacity"
                     duration: 500
                 }
@@ -374,6 +387,57 @@ Window {
                 }
                 PropertyChanges {
                     target: sinostep
+                    opacity: 1
+                    enabled: true
+                }
+                PropertyChanges {
+                    target: topmenu
+                    opacity: 1
+                }
+            },
+            State {
+                name: "recostep"
+                PropertyChanges {
+                    target: introstep
+                    opacity: 0
+                }
+                PropertyChanges {
+                    target: prepastep
+                    opacity: 0
+                    enabled: false
+                }
+                PropertyChanges {
+                    target: loadstep
+                    opacity: 0
+                    enabled: false
+                }
+                PropertyChanges {
+                    target: cropstep
+                    opacity: 0
+                    enabled: false
+                }
+                PropertyChanges {
+                    target: filterstep
+                    opacity: 0
+                    enabled: false
+                }
+                PropertyChanges {
+                    target: normstep
+                    opacity: 0
+                    enabled: false
+                }
+                PropertyChanges {
+                    target: tiltstep
+                    opacity: 0
+                    enabled: false
+                }
+                PropertyChanges {
+                    target: sinostep
+                    opacity: 0
+                    enabled: false
+                }
+                PropertyChanges {
+                    target: recostep
                     opacity: 1
                     enabled: true
                 }

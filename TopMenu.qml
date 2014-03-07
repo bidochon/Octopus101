@@ -508,7 +508,7 @@ Item {
                                 step6.isSelected = false;
                                 step7.buttonImageSource = "buttons/MenuBar_off.png";
                                 step7.isSelected = false;
-                                windowrectangle.state = "reconstruction";
+                                windowrectangle.state = "recostep";
 
                             } else {
                                 buttonImageSource = "buttons/MenuBar_selected.png";
