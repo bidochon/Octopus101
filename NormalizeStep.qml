@@ -5,7 +5,7 @@ Rectangle {
     id: normstep
     color: "transparent"
 
-    property variant statesNames: ["normstep1","normstep2","normstep3","normstep4","normstep5"]
+    property variant statesNames: ["normstep1","normstep2","normstep3","normstep4","normstep5","normstep6","normstep7","normstep8"]
     property int currentState: 0
 
     Image {
@@ -131,6 +131,89 @@ Rectangle {
         y: 50
         opacity: 0
     }
+
+    // ring filter value
+    Text {
+        id: normstep_text6
+        x: normstep_text1.x
+        y: normstep_text1.y
+        width: notepad.width -100
+        wrapMode: Text.WordWrap
+        text: "In most of the cases, <b>the default value of 3 is good enough</b>. You may need to come back to this step later
+        if you are not satisfied with the level of the rings displayed (should be minimum) or if you see some strange
+        artifacts.<br><br>
+        <b>Click OK</b> to validate choice."
+        font.family: "Helevetica"
+        font.pointSize: 14
+        color: "black"
+        lineHeight: 1.2
+        opacity: 0
+    }
+
+    Image {
+        id: normstep_image6
+        source: "normStep/image6.png"
+        x: 270
+        y: 50
+        opacity: 0
+    }
+
+    // normalizing and filtering
+    Text {
+        id: normstep_text7
+        x: normstep_text6.x
+        y: normstep_text6.y + normstep_text6.height + 20
+        width: notepad.width -100
+        wrapMode: Text.WordWrap
+        text: "Be patient while the program perform the <b>normalization</b><br><br><br>and<br><br><br><b>the filtering of the rings.</b>."
+        font.family: "Helevetica"
+        font.pointSize: 14
+        color: "black"
+        lineHeight: 1.2
+        opacity: 0
+    }
+
+    Image {
+        id: normstep_image7
+        source: "normStep/image7.png"
+        x: 150
+        y: 50
+        opacity: 0
+    }
+
+    Image {
+        id: normstep_image8
+        source: "normStep/image8.png"
+        x: normstep_image7.x
+        y: normstep_image7.y + normstep_image7.height + 10
+        opacity: 0
+    }
+
+    // normalization step done
+    Text {
+        id: normstep_text8
+        x: normstep_text1.x
+        y: normstep_text1.y + 28
+        width: notepad.width -100
+        wrapMode: Text.WordWrap
+        text: "<b>Normalization step</b> is done !"
+        font.family: "Helevetica"
+        font.pointSize: 14
+        color: "black"
+        lineHeight: 1.2
+        opacity: 0
+    }
+
+    Image {
+        id: normstep_image9
+        source: "normStep/image9.png"
+        x: 50
+        y: 30
+        opacity: 0
+    }
+
+
+
 
     // bottom buttons
     Image {
@@ -260,10 +343,6 @@ Rectangle {
                 opacity: 0.5
             }
             PropertyChanges {
-                target: normstep_image2
-                opacity: 0
-            }
-            PropertyChanges {
                 target: normstep_text3
                 opacity: 1
             }
@@ -295,16 +374,8 @@ Rectangle {
                 opacity: 0.5
             }
             PropertyChanges {
-                target: normstep_image2
-                opacity: 0
-            }
-            PropertyChanges {
                 target: normstep_text3
                 opacity: 0.5
-            }
-            PropertyChanges {
-                target: normstep_image3
-                opacity: 0
             }
             PropertyChanges {
                 target: normstep_text4
@@ -338,24 +409,12 @@ Rectangle {
                 opacity: 0.5
             }
             PropertyChanges {
-                target: normstep_image2
-                opacity: 0
-            }
-            PropertyChanges {
                 target: normstep_text3
                 opacity: 0.5
             }
             PropertyChanges {
-                target: normstep_image3
-                opacity: 0
-            }
-            PropertyChanges {
                 target: normstep_text4
                 opacity: 0.5
-            }
-            PropertyChanges {
-                target: normstep_image4
-                opacity: 0
             }
             PropertyChanges {
                 target: normstep_text5
@@ -364,6 +423,103 @@ Rectangle {
             PropertyChanges {
                 target: normstep_image5
                 opacity: 1
+            }
+        },
+        State {
+            name: "normstep6"
+            PropertyChanges {
+                target: normstep_text1
+                opacity: 0
+            }
+            PropertyChanges {
+                target: normstep_image1
+                opacity: 0
+            }
+            PropertyChanges {
+                target: prev
+                opacity: 1
+            }
+            PropertyChanges {
+                target: prev_mousearea
+                enabled: true
+            }
+            PropertyChanges {
+                target: normstep_text6
+                opacity: 1
+            }
+            PropertyChanges {
+                target: normstep_image6
+                opacity: 1
+            }
+        },
+        State {
+            name: "normstep7"
+            PropertyChanges {
+                target: normstep_text1
+                opacity: 0
+            }
+            PropertyChanges {
+                target: normstep_image1
+                opacity: 0
+            }
+            PropertyChanges {
+                target: prev
+                opacity: 1
+            }
+            PropertyChanges {
+                target: prev_mousearea
+                enabled: true
+            }
+            PropertyChanges {
+                target: normstep_text6
+                opacity: 0.5
+            }
+            PropertyChanges {
+                target: normstep_text7
+                opacity: 1
+            }
+            PropertyChanges {
+                target: normstep_image7
+                opacity: 1
+            }
+            PropertyChanges {
+                target: normstep_image8
+                opacity: 1
+            }
+        },
+        State {
+            name: "normstep8"
+            PropertyChanges {
+                target: normstep_text1
+                opacity: 0
+            }
+            PropertyChanges {
+                target: normstep_image1
+                opacity: 0
+            }
+            PropertyChanges {
+                target: prev
+                opacity: 1
+            }
+            PropertyChanges {
+                target: prev_mousearea
+                enabled: true
+            }
+            PropertyChanges {
+                target: normstep_text8
+                opacity: 1
+            }
+            PropertyChanges {
+                target: normstep_image9
+                opacity: 1
+            }
+            PropertyChanges {
+                target: next
+                opacity: 0
+            }
+            PropertyChanges {
+                target: next_mousearea
+                enabled: false
             }
         }
     ]
