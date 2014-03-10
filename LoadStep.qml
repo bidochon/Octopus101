@@ -16,17 +16,13 @@ Rectangle {
     }
 
     // import the data
-    Text {
+    MyText {
         id: loadstep_text1
         x: notepad.x + 75
         y: notepad.y + 58
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "Now we need to <b>import the data</b> into Octopus."
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
+        opacity: 1
     }
 
     Image {
@@ -36,18 +32,12 @@ Rectangle {
         y: 57
     }
 
-    Text {
+    MyText {
         id: loadstep_text2
         x: loadstep_text1.x
         y: loadstep_text1.y + loadstep_text1.height + 10
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "Select the right folder and click <b>Current Folder</b>."
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
-        opacity: 0
     }
 
     Image {
@@ -58,19 +48,13 @@ Rectangle {
         opacity: 0
     }
 
-    Text {
+    MyText {
         id: loadstep_text3
         x: loadstep_text2.x
         y: loadstep_text2.y + loadstep_text2.height + 10
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "Because Octopus only work with <b>tiff</b> files, the program is going to ask you if you want to convert them to TIFF. Click <b>OK</b>.<br><br><br>
                  - Select the same folder again (that contain all your data)<br> and click <b>Current Folder</b>"
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
-        opacity: 0
     }
 
     Image {
@@ -90,18 +74,12 @@ Rectangle {
     }
 
     // converted folder name
-    Text {
+    MyText {
         id: loadstep_text4
         x: loadstep_text1.x
         y: loadstep_text1.y
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "Accept the default folder named <b>converted</b> proposed (where the TIFF files will be created)."
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
-        opacity: 0
     }
 
     Image {
@@ -113,20 +91,14 @@ Rectangle {
     }
 
     // converted images window
-    Text {
+    MyText {
         id: loadstep_text5
         x: loadstep_text4.x
         y: loadstep_text4.y + loadstep_text4.height + 20
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "The <b>Convert Images</b> window will show up.<br><br>
         <font color='red'>WARNING</font>: Make sure you have <b>16 bit tiff</b> selected as Output format.<br>
         Click <b>Convert all</b>"
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
-        opacity: 0
     }
 
     Image {
@@ -138,18 +110,12 @@ Rectangle {
     }
 
     // converted images window
-    Text {
+    MyText {
         id: loadstep_text6
         x: loadstep_text5.x
         y: loadstep_text5.y + loadstep_text5.height + 20
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "Make sure you select <br><font color='red'><b>No - save current gray values without conversion</b></font>."
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
-        opacity: 0
     }
 
     Image {
@@ -161,19 +127,13 @@ Rectangle {
     }
 
     // conversion start, selection of OB
-    Text {
+    MyText {
         id: loadstep_text7
         x: loadstep_text1.x
         y: loadstep_text1.y
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "The conversion will start... BE PATIENT !<br><br>
         Then you will need to select the <b>first Open Beam</b> file."
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
-        opacity: 0
     }
 
     Image {
@@ -193,18 +153,12 @@ Rectangle {
     }
 
     // selection of DF
-    Text {
+    MyText {
         id: loadstep_text8
         x: loadstep_text1.x
-        y: loadstep_text2.y + loadstep_text2.height + 20
+        y: loadstep_text7.y + loadstep_text7.height + 20
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "Now, you need to select the <b>first Dark Field (Dark Image)</b> file."
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
-        opacity: 0
     }
 
     Image {
@@ -224,18 +178,12 @@ Rectangle {
     }
 
     // check input
-    Text {
+    MyText {
         id: loadstep_text9
         x: loadstep_text1.x
         y: loadstep_text1.y
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "Check in the <b>File Selection</b> window that all the <b>Data</b>, <b>Open Beam</b> and <b>Dark Field</b> files have been loaded."
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
-        opacity: 0
     }
 
     Image {
@@ -247,18 +195,12 @@ Rectangle {
     }
 
     // define last angle
-    Text {
+    MyText {
         id: loadstep_text10
         x: loadstep_text9.x
         y: loadstep_text9.y + loadstep_text9.height + 20
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "Enter in the <b>Last Angle</b> box, the last angle position that you recorded in the <b>Preparation Step</b>, then click <b>OK</b>."
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
-        opacity: 0
     }
 
     Image {
@@ -270,18 +212,12 @@ Rectangle {
     }
 
     // recap
-    Text {
+    MyText {
         id: loadstep_text11
         x: loadstep_text10.x
         y: loadstep_text10.y + loadstep_text10.height + 20
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "The loading step is done! Just check one more time the number of <b>Data</b>, <b>Open Beam</b> and <b>Dark Field</b> files."
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
-        opacity: 0
     }
 
     Image {

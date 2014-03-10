@@ -16,17 +16,13 @@ Rectangle {
     }
 
     // enter crop menu
-    Text {
+    MyText {
         id: filterstep_text1
         x: notepad.x + 75
         y: notepad.y + 50
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "Go to <b>Preparation > Filter Spots</b>"
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
+        opacity: 1
     }
 
     Image {
@@ -37,18 +33,12 @@ Rectangle {
     }
 
     // Select input folder
-    Text {
+    MyText {
         id: filterstep_text2
         x: filterstep_text1.x
         y: filterstep_text1.y + filterstep_text1.height + 20
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "Select the input folder (created in the previous step) <b>resized</b> and click <b>Current Folder</b>"
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
-        opacity: 0
     }
 
     Image {
@@ -60,18 +50,12 @@ Rectangle {
     }
 
     // Select output folder
-    Text {
+    MyText {
         id: filterstep_text3
         x: filterstep_text2.x
         y: filterstep_text2.y + filterstep_text2.height + 20
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "Accept the default output folder proposed (<b>clean</b>) by clicking <b>Current Folder</b>."
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
-        opacity: 0
     }
 
     Image {
@@ -83,21 +67,15 @@ Rectangle {
     }
 
     // filter window
-    Text {
+    MyText {
         id: filterstep_text4
         x: filterstep_text3.x
         y: filterstep_text3.y + filterstep_text3.height + 20
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "<b>The left window</b> displays the original data.<br>
         <b>The right window</b> displays the data after filtering.<br><br>
         Select the filter method you want. In most cases, to get rid off most of gammas pixels, you will need to use the <b>High</b> method.<br><br>
         Then select <b>OK</b> to start the calculation on all the slices."
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
-        opacity: 0
     }
 
     Image {
@@ -109,17 +87,12 @@ Rectangle {
     }
 
     // filtering in progress
-    Text {
+    MyText {
         id: filterstep_text5
         x: filterstep_text1.x
         y: filterstep_text1.y
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "Please be pating while the program run the filter algorithm on all the data (slices)!"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
-        opacity: 0
     }
 
     Image {
@@ -131,17 +104,12 @@ Rectangle {
     }
 
     // done
-    Text {
+    MyText {
         id: filterstep_text6
         x: filterstep_text5.x
         y: filterstep_text5.y + filterstep_text5.height + 20
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "Filtering step is done!"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
-        opacity: 0
     }
 
     Image {

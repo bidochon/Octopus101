@@ -16,17 +16,13 @@ Rectangle {
     }
 
     // enter tilt menu
-    Text {
+    MyText {
         id: tiltstep_text1
         x: notepad.x + 75
         y: notepad.y + 75
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "Go to <b>Preparation > Correct axis tilt</b>"
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
+        opacity: 1
     }
 
     Image {
@@ -37,18 +33,12 @@ Rectangle {
     }
 
     // Select input folder
-    Text {
+    MyText {
         id: tiltstep_text2
         x: tiltstep_text1.x
         y: tiltstep_text1.y + tiltstep_text1.height + 20
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "Select input data folder created in previous step called <b>normalised</b>, then click <b>Current Folder</b>."
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
-        opacity: 0
     }
 
     Image {
@@ -60,18 +50,12 @@ Rectangle {
     }
 
     // Select output folder
-    Text {
+    MyText {
         id: tiltstep_text3
         x: tiltstep_text2.x
         y: tiltstep_text2.y + tiltstep_text2.height + 20
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "Accept the default output folder name proposed (<b>rotated</b>) by clicking <b>Current Folder</b>."
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
-        opacity: 0
     }
 
     Image {
@@ -83,18 +67,12 @@ Rectangle {
     }
 
     // Select projection 0degree
-    Text {
+    MyText {
         id: tiltstep_text4
         x: tiltstep_text3.x
         y: tiltstep_text3.y + tiltstep_text3.height + 20
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "Select the first data file, the one with a projectionn of <b>0 degrees</b>, then click <b>OK</b>."
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
-        opacity: 0
     }
 
     Image {
@@ -106,18 +84,12 @@ Rectangle {
     }
 
     // Select projection 180degrees
-    Text {
+    MyText {
         id: tiltstep_text5
         x: tiltstep_text4.x
         y: tiltstep_text4.y + tiltstep_text4.height + 20
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "Select the data file corresponding to a projection of <b>180 degrees</b> (remember the offset you wrote down in the <b>Preparation step</b>). Then click <b>OK</b>."
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
-        opacity: 0
     }
 
     Image {
@@ -129,18 +101,12 @@ Rectangle {
     }
 
     // normalize projections ?
-    Text {
+    MyText {
         id: tiltstep_text6
         x: tiltstep_text1.x
         y: tiltstep_text1.y
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "Keep the default value <b>NO</b> as you do not want to normalize projections with flat field images."
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
-        opacity: 0
     }
 
     Image {
@@ -152,18 +118,12 @@ Rectangle {
     }
 
     // ROI selection
-    Text {
+    MyText {
         id: tiltstep_text7
         x: tiltstep_text6.x
         y: tiltstep_text6.y + tiltstep_text6.height + 20
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "Select a region <b>closely tight to the sample</b>. This ROI will be used to evaluate the tilt of the sample.<br>Then click <b>ACCEPT</b> to start the calculation."
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
-        opacity: 0
     }
 
     Image {
@@ -175,18 +135,12 @@ Rectangle {
     }
 
     // Calculation
-    Text {
+    MyText {
         id: tiltstep_text8
         x: tiltstep_text7.x
         y: tiltstep_text7.y + tiltstep_text7.height + 20
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "Please be patient as the program evaluates the tilt of the sample... then display the <b>tilt angle found</b>. <br><br>Click <b>OK</b> to validate the tilt value."
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
-        opacity: 0
     }
 
     Image {
@@ -198,19 +152,13 @@ Rectangle {
     }
 
     // correct tilt
-    Text {
+    MyText {
         id: tiltstep_text9
         x: tiltstep_text1.x
         y: tiltstep_text1.y
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "With this window, you can check the tilt through the volume by selecting a <b>Image Number (left side)</b> and <b>click Test</b> to visualize this slide.<br><br>
         Once your are satisfied with the tilt angle, click <b>START</b>"
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
-        opacity: 0
     }
 
     Image {
@@ -222,19 +170,13 @@ Rectangle {
     }
 
     // calcualtion running
-    Text {
+    MyText {
         id: tiltstep_text10
         x: tiltstep_text1.x
         y: tiltstep_text1.y
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "Please be patient as the program apply the tilt on all the data files (slices).<br><br>
         the progress of the calculation can be visualized by looking at the Image Number box."
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
-        opacity: 0
     }
 
     Image {
@@ -246,17 +188,12 @@ Rectangle {
     }
 
     // process done
-    Text {
+    MyText {
         id: tiltstep_text11
         x: tiltstep_text1.x
         y: tiltstep_text1.y + 10
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "<b>Tilt step</b> is done !"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
-        opacity: 0
     }
 
     Image {

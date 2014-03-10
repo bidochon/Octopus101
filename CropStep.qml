@@ -16,17 +16,13 @@ Rectangle {
     }
 
     // enter crop menu
-    Text {
+    MyText {
         id: cropstep_text1
         x: notepad.x + 75
         y: notepad.y + 90
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "Go to <b>Preparation > Crop Images</b>"
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
+        opacity: 1
     }
 
     Image {
@@ -37,18 +33,12 @@ Rectangle {
     }
 
     // enter crop menu
-    Text {
+    MyText {
         id: cropstep_text2
         x: cropstep_text1.x
         y: cropstep_text1.y + cropstep_text1.height + 20
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "Select folder that contain the data (<b>converted</b> folder), and click <b>Current Folder</b>."
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
-        opacity: 0
     }
 
     Image {
@@ -60,18 +50,12 @@ Rectangle {
     }
 
     // enter crop menu
-    Text {
+    MyText {
         id: cropstep_text3
         x: cropstep_text2.x
         y: cropstep_text2.y + cropstep_text2.height + 20
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "Then just accept the proposed output folder name, <b>resized</b> by clicking <b>Current Folder</b>."
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
-        opacity: 0
     }
 
     Image {
@@ -83,12 +67,11 @@ Rectangle {
     }
 
     // Select crop region
-    Text {
+    MyText {
         id: cropstep_text4
         x: cropstep_text1.x
         y: cropstep_text1.y
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "To optimize all the calculations to come, select a rectangle region closely tied to the sample (make sure you don't take out parts of your sample).<br><br>
         <font color='red'>Method</font><br>
          <b>1/ Click the first corner</b> of the region to keep<br>
@@ -96,11 +79,6 @@ Rectangle {
         3/ move to the opposite corner and <b>release click</b>.<br><br>
         Using the <b>left</b>, <b>top</b>, <b>right</b> and/or <b>bottom</b> boxes, you can modify manually the selection you juste made.<br><br>
         Click <b>ACCEPT</b> to validate the selection."
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
-        opacity: 0
     }
 
     Image {
@@ -112,18 +90,12 @@ Rectangle {
     }
 
     // crop processing
-    Text {
+    MyText {
         id: cropstep_text5
         x: cropstep_text4.x
         y: cropstep_text4.y + cropstep_text4.height + 20
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "Just be patient as the program crops all the slices."
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
-        opacity: 0
     }
 
     Image {
@@ -135,18 +107,12 @@ Rectangle {
     }
 
     // crop processing
-    Text {
+    MyText {
         id: cropstep_text6
         x: cropstep_text1.x
         y: cropstep_text1.y
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "Crop Step is done !"
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
-        opacity: 0
     }
 
     Image {

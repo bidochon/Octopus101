@@ -6,7 +6,7 @@ Rectangle {
     color: "transparent"
 
     property variant statesNames: ["prepa1","prepa2","prepa3","prepa4","prepa5","prepa6","prepa7","prepa8"]
-    property int currentState: 0    
+    property int currentState: 0
 
     Image {
         id: notepad
@@ -15,18 +15,13 @@ Rectangle {
         y: 50
     }
 
-    // write down last angle
-    Text {
+    MyText {
         id: prepa_text1
         x: notepad.x + 75
         y: notepad.y + 58
         width: notepad.width - 100
-        wrapMode: Text.WordWrap
         text: "Start by writing down <b>the last angle</b> of the data set -> <b>181.5</b> here."
-        font.family: "Helvetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.5
+        opacity: 1
     }
 
     Image {
@@ -36,19 +31,13 @@ Rectangle {
         y: notepad.y + 50
     }
 
-    // make sure first angle is 0
-    Text {
+    MyText {
         id: prepa_text2
         x: prepa_text1.x
         y: prepa_text1.y + prepa_text1.height + 20
         width: notepad.width - 100
-        wrapMode: Text.WordWrap
         text: "Make sure the first angle is <b>0.0 degree</b>."
-        font.family: "Helvetica"
-        font.pointSize: 14
-        color: "black"
         opacity: 0
-        lineHeight: 1.5
     }
 
     Image {
@@ -60,18 +49,12 @@ Rectangle {
     }
 
     // write down offset between last and 180 degrees
-    Text {
+    MyText {
         id: prepa_text3
         x: prepa_text2.x
         y: prepa_text2.y + prepa_text2.height + 20
         width: notepad.width - 100
-        wrapMode: Text.WordWrap
         text: "Write down the number of files between the last one and the one with an angle of <b>180 degrees</b>. This will be necessary when calculating the <b>sample tilt</b>."
-        font.family: "Helvetica"
-        font.pointSize: 14
-        color: "black"
-        opacity: 0
-        lineHeight: 1.5
     }
 
     Image {
@@ -83,52 +66,34 @@ Rectangle {
     }
 
     // OB and DF are in the same folder
-    Text {
+    MyText {
         id: prepa_text4
         x: prepa_text3.x
         y: prepa_text3.y + prepa_text3.height + 20
         width: notepad.width - 100
-        wrapMode: Text.WordWrap
         text: "Make sure that the <b>Open Beam (OB)</b> and <b>Dark Field (DF)</b> files are in the same folder."
-        font.family: "Helvetica"
-        font.pointSize: 14
-        color: "black"
-        opacity: 0
-        lineHeight: 1.5
     }
 
     // Rename files
-    Text {
+    MyText {
         id: prepa_text5
         x: prepa_text4.x
         y: prepa_text4.y + prepa_text4.height + 20
         width: notepad.width - 100
-        wrapMode: Text.WordWrap
         text: "Because <b>data</b>, <b>OB</b> and <b>DF</b> must respect a special name format, we must first renamed those files:<br>   - <b>Open Beam</b> must be named <b>ob_####.tif</b><br>   - <b>Dark Field</b> must be named <b>df_####.tif</b>."
-        font.family: "Helvetica"
-        font.pointSize: 14
-        color: "black"
-        opacity: 0
-        lineHeight: 1.5
     }
 
-    Text {
+    MyText {
         id: prepa_text6
         x: prepa_text1.x
         y: prepa_text1.y
         width: notepad.width - 100
-        wrapMode: Text.WordWrap
         text: "Use the <b>Other functions > Rename files</b> feature to rename those files.<br><br><br><br><br>
            - <b>Move to the folder</b> that contain the data and <b>CLICK Current Folder</b>.<br><br><br><br><br>
            - Let's start with the Open Beam files by selecting the OB files.<br>
            - Define the <b>basename</b>: <b>OB_</b><br>;
            - Enter the <b>Shift numbers</b> to make sure the first name in the <b>New File Names</b> box is <b>OB_00.tif</b><br>
            - Adjusting the <b>Add Zeros</b> is optional here (but will be <b>very important when renaming the data</b>.";
-        font.family: "Helvetica"
-        font.pointSize: 14
-        color: "black"
-        opacity: 0
-        lineHeight: 1.5
     }
 
     Image {
@@ -156,23 +121,17 @@ Rectangle {
     }
 
     // Rename files with DF and Data
-    Text {
+    MyText {
         id: prepa_text7
         x: prepa_text1.x
         y: prepa_text1.y
         width: notepad.width - 100
-        wrapMode: Text.WordWrap
         text: "Repeat the process to rename the <b>Dark Field</b> files<br><br>
            - <b>Move to the folder</b> that contain the data and <b>CLICK Current Folder</b>.<br>
            - Select the DF files.<br>
            - Define the <b>basename</b>: <b>DF_####</b><br>;
            - Enter the <b>Shift numbers</b> to make sure the first name in the <b>New File Names</b> box is <b>DF_00.tif</b><br>
            - Adjusting the <b>Add Zeros</b> is optional here (but will be <b>very important when renaming the data</b>.<br>"
-        font.family: "Helvetica"
-        font.pointSize: 14
-        color: "black"
-        opacity: 0
-        lineHeight: 1.5
     }
 
     Image {
@@ -183,12 +142,11 @@ Rectangle {
         opacity: 0
     }
 
-    Text {
+    MyText {
         id: prepa_text8
         x: prepa_text1.x
         y: prepa_text1.y
         width: notepad.width - 100
-        wrapMode: Text.WordWrap
         text: "And finally, repeat the process for the <b>Data</b> files<br>
             - <b>Move to the folder</b> that contain the data and <b>CLICK Current Folder</b>.<br>
             - Select the Data files.<br>
@@ -202,11 +160,6 @@ Rectangle {
                Between 10 and 100 -> 2<br>
                Between 100 and 1000 -> 3<br>
                Between 1000 and 10000 -> 4<br>"
-        font.family: "Helvetica"
-        font.pointSize: 14
-        color: "black"
-        opacity: 0
-        lineHeight: 1.5
     }
 
     Image {
@@ -260,11 +213,10 @@ Rectangle {
         hoverEnabled: true
         onPressed: {
             next.source = "global_images/next_click.png"
-            console.log(parent.id)
-//            if (parent.id === prepastep) {
+            //            if (parent.id === prepastep) {
             currentState++
             prepastep.state = statesNames[currentState]
-//            }
+            //            }
         }
         onEntered: {
             next.source = "global_images/next_on.png"

@@ -16,17 +16,13 @@ Rectangle {
     }
 
     // enter norm menu
-    Text {
+    MyText {
         id: normstep_text1
         x: notepad.x + 75
         y: notepad.y + 50
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "Go to <b>Preparation > Normalise images</b>"
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
+        opacity: 1
     }
 
     Image {
@@ -37,18 +33,12 @@ Rectangle {
     }
 
     // select input
-    Text {
+    MyText {
         id: normstep_text2
         x: normstep_text1.x
         y: normstep_text1.y + normstep_text1.height + 20
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "Select the input folder (created in the previous step) <b> clean</b> and click <b>Select Folder</b>."
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
-        opacity: 0
     }
 
     Image {
@@ -60,18 +50,12 @@ Rectangle {
     }
 
     // select output
-    Text {
+    MyText {
         id: normstep_text3
         x: normstep_text2.x
         y: normstep_text2.y + normstep_text2.height + 20
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "Accept the default output folder proposed (<b>normalised</b>) by clicking <b>Current Folder</b>."
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
-        opacity: 0
     }
 
     Image {
@@ -83,18 +67,12 @@ Rectangle {
     }
 
     // select roi ?
-    Text {
+    MyText {
         id: normstep_text4
         x: normstep_text3.x
         y: normstep_text3.y + normstep_text3.height + 20
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "Select <b>Yes</b> to select a <b>Background Region</b>."
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
-        opacity: 0
     }
 
     Image {
@@ -106,22 +84,16 @@ Rectangle {
     }
 
     // selection
-    Text {
+    MyText {
         id: normstep_text5
         x: normstep_text4.x
         y: normstep_text4.y + normstep_text4.height + 20
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "Select a region that <font color='red'><b>does not touch the sample</b></font>.<br>
         1/<b> Click the first corner</b> of the region.<br>
         2/ without releasing the left click,<br>
         3/ move to the opposite corner and <b>release click</b>.<br><br>
         Then click <b>ACCEPT</b>."
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
-        opacity: 0
     }
 
     Image {
@@ -133,21 +105,15 @@ Rectangle {
     }
 
     // ring filter value
-    Text {
+    MyText {
         id: normstep_text6
         x: normstep_text1.x
         y: normstep_text1.y
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "In most of the cases, <b>the default value of 3 is good enough</b>. You may need to come back to this step later
         if you are not satisfied with the level of the rings displayed (should be minimum) or if you see some strange
         artifacts.<br><br>
         <b>Click OK</b> to validate choice."
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
-        opacity: 0
     }
 
     Image {
@@ -159,18 +125,12 @@ Rectangle {
     }
 
     // normalizing and filtering
-    Text {
+    MyText {
         id: normstep_text7
         x: normstep_text6.x
         y: normstep_text6.y + normstep_text6.height + 20
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "Be patient while the program perform the <b>normalization</b><br><br><br>and<br><br><br><b>the filtering of the rings.</b>."
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
-        opacity: 0
     }
 
     Image {
@@ -190,18 +150,12 @@ Rectangle {
     }
 
     // normalization step done
-    Text {
+    MyText {
         id: normstep_text8
         x: normstep_text1.x
         y: normstep_text1.y + 28
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "<b>Normalization step</b> is done !"
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
-        opacity: 0
     }
 
     Image {
@@ -211,9 +165,6 @@ Rectangle {
         y: 30
         opacity: 0
     }
-
-
-
 
     // bottom buttons
     Image {

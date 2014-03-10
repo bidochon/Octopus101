@@ -16,17 +16,13 @@ Rectangle {
     }
 
     // enter sinogram menu
-    Text {
+    MyText {
         id: sinostep_text1
         x: notepad.x + 75
         y: notepad.y + 75
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "Go to <b>Preparation > Sinograms</b>"
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
+        opacity: 1
     }
 
     Image {
@@ -37,18 +33,12 @@ Rectangle {
     }
 
     // Select input folder
-    Text {
+    MyText {
         id: sinostep_text2
         x: sinostep_text1.x
         y: sinostep_text1.y + sinostep_text1.height + 20
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "Select input data folder created in previous step called <b>rotated</b>, then click <b>Current Folder</b>."
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
-        opacity: 0
     }
 
     Image {
@@ -60,71 +50,53 @@ Rectangle {
     }
 
     // Select output folder
-    Text {
+    MyText {
         id: sinostep_text3
         x: sinostep_text2.x
         y: sinostep_text2.y + sinostep_text2.height + 20
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "Accept the default output folder name proposed (<b>sinograms</b>) by clicking <b>Current Folder</b>."
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
-        opacity: 0
     }
 
     Image {
         id: sinostep_image3
         source: "sinoStep/image3.png"
         x: 35
-        y: 180
+        y: 140
         opacity: 0
     }
 
     // Running process
-    Text {
+    MyText {
         id: sinostep_text4
         x: sinostep_text3.x
         y: sinostep_text3.y + sinostep_text3.height + 20
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "Please be patient as the the program calculates the sinograms."
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
-        opacity: 0
     }
 
     Image {
         id: sinostep_image4
         source: "sinoStep/image4.png"
         x: 320
-        y: 290
+        y: 250
         opacity: 0
     }
 
     // Process done
-    Text {
+    MyText {
         id: sinostep_text5
         x: sinostep_text4.x
         y: sinostep_text4.y + sinostep_text4.height + 20
         width: notepad.width -100
-        wrapMode: Text.WordWrap
         text: "Sinogram step is done !"
-        font.family: "Helevetica"
-        font.pointSize: 14
-        color: "black"
-        lineHeight: 1.2
-        opacity: 0
     }
 
     Image {
         id: sinostep_image5
         source: "sinoStep/image5.png"
         x: 65
-        y: 285
+        y: 245
         opacity: 0
     }
 
