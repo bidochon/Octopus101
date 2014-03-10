@@ -3,7 +3,7 @@ import QtQuick.Window 2.0
 
 Window {
     id: window
-    width: 1200  //1100
+    width: 1100
     height: 1000
     minimumHeight: 900
     minimumWidth: 950
