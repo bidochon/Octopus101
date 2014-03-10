@@ -8,7 +8,7 @@ Text {
         if (Qt.platform.os === 'osx') {
             return 14;
         } else {
-            return 12;
+            return 10;
         }
     }
     color: "black"
